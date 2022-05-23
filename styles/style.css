@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -42,7 +38,7 @@
 .header__title {
   align-self: center;
   margin: 0 0 0 64px;
-  width: 730px;
+  max-width: 730px;
   font-size: 102px;
   line-height: 96px;
   font-weight: 700;
@@ -55,7 +51,7 @@
   margin: 0;
   left: 64px;
   bottom: 30px;
-  width: 388px;
+  max-width: 388px;
   font-size: 18px;
   line-height: 25px;
   font-weight: 400;
@@ -75,6 +71,8 @@
   right: 0;
   bottom: 0;
   position: absolute;
+  object-fit: cover;
+  object-position: top;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
@@ -90,25 +88,27 @@
 
 /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 CONTENT OF PAGE  */
+
+/* ! Замечание ! position: relative - зд. не нужен - удален */
 .content {
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 
 /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 /* SECTION-DESCRIPTION - TWO COLUMNS  */
+
+/* ! Замечание ! position: relative - зд. не нужен - удален */
 .description {
   display: flex;
-  position: relative;
   justify-content: center;
 }
 
 /* 1. Общая Обертка для левой и для правой колонок */
+/* ! Замечание ! position: relative - зд. не нужен - удален */
 .two-columns {
   width: 80%;
   display: flex;
-  position: relative;
   margin-top: 100px;
   justify-content: space-between;
   min-height: fit-content;
@@ -117,8 +117,8 @@ CONTENT OF PAGE  */
 /* 2 левая колонка с заголовком */
 .two-columns__brief {
   margin: 0;
-  width: 175px;
-  line-height: 1.2em;
+  max-width: 175px;
+  line-height: 1.2;
   font-size: 18px;
   font-weight: 400;
   color: #2f80ed;
@@ -134,11 +134,16 @@ CONTENT OF PAGE  */
 }
 
 .two-columns__paragraph {
-  margin: 0;
+  margin: 0 0 30px 0;
 }
 
+/* ! замечание !
 .two-columns__paragraph:nth-last-child(2) {
   margin: 30px 0;
+} */
+
+.two-columns__paragraph:last-child {
+  margin: 0;
 }
 
 .two-columns__span-accent {
@@ -149,17 +154,18 @@ CONTENT OF PAGE  */
 
 /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 /* SECTION-DIGITS - TABLE */
+
+/* ! Замечание ! position: relative - зд. не нужен - удален */
 .digits {
   display: flex;
   flex-direction: column;
-  position: relative;
   padding-top: 100px;
 }
 
 .section-title {
   /*  !!! НУЖНО ИСПОЛЬЗОВАТЬ ПОВТОРНО !!! */
   text-align: center;
-  line-height: 1.15em;
+  line-height: 1.15;
   font-size: 60px;
   font-weight: 700;
   width: 60%;
@@ -180,7 +186,6 @@ CONTENT OF PAGE  */
 .table {
   position: relative;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 1100px;
@@ -189,7 +194,12 @@ CONTENT OF PAGE  */
   list-style: none;
 }
 
+/* ! замечание ! - удалено
 .table:nth-last-child(1) {
+  margin-bottom: 100px;
+} */
+
+.table:last-child {
   margin-bottom: 100px;
 }
 
@@ -203,13 +213,13 @@ CONTENT OF PAGE  */
 
 .table__heading {
   margin: 0;
-  line-height: 1.15em;
+  line-height: 1.15;
   font-size: 24px;
   font-weight: 700;
 }
 
 .table__text {
-  line-height: 1.2em;
+  line-height: 1.2;
   font-size: 18px;
   font-weight: 400;
   margin: 20px 0 0 0;
@@ -218,7 +228,7 @@ CONTENT OF PAGE  */
 /* XXXXXXXX - FEYNMAN SECTION - XXXXXXXXXXXXXXX */
 .feynman {
   position: relative;
-  height: 890px;
+  min-height: 890px;
   background-image: url(../images/feynman.png);
   background-repeat: no-repeat;
   background-position: bottom left;
@@ -227,19 +237,18 @@ CONTENT OF PAGE  */
 }
 
 .feynman__title {
-  position: relative;
+  /* position: relative; - удалено как лишнее свойство */
   margin: 100px auto 0;
-  width: 648px;
-  line-height: 1.15em;
+  max-width: 648px;
+  line-height: 1.15;
   font-size: 120px;
   font-weight: 700;
   text-align: center;
 }
 
 .feynman__subtitle {
-  position: relative;
+  /* position: relative; - удалено как лишнее свойство */
   margin: 70px auto 0;
-  /* width: 400px; */
   line-height: 51px;
   font-size: 36px;
   font-weight: 400;
@@ -315,7 +324,7 @@ CONTENT OF PAGE  */
 /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 FOOTER ///////////////////////////////////////////////////// */
 
-footer {
+.footer {
   display: flex;
   min-height: 350px;
   justify-content: center;
@@ -350,12 +359,6 @@ footer {
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
-}
-
-.footer__column_content_info {
-}
-
-.footer__column_content_social {
 }
 
 .footer__column-heading {
