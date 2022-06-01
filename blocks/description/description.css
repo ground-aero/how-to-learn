@@ -1,0 +1,6 @@
+/* SECTION-DESCRIPTION - TWO COLUMNS  */
+/* ! Замечание ! position: relative - зд. не нужен - удален */
+.description {
+  display: flex;
+  justify-content: center;
+}

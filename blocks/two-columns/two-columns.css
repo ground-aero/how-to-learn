@@ -1,0 +1,9 @@
+/* 1. Общая Обертка для левой и для правой колонок */
+/* ! Замечание ! position: relative - зд. не нужен - удален */
+.two-columns {
+  width: 80%;
+  display: flex;
+  margin-top: 100px;
+  justify-content: space-between;
+  min-height: fit-content;
+}

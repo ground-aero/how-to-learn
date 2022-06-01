@@ -1,0 +1,11 @@
+/* ЭТО ЭЛЕМЕНТ БЛОКА ИЛИ БЛОК ВНУТРИ БЛОКА ХЕДЕРА ? */
+.header__main-illustration {
+  /* background-image: url(../images/header-image.png); */
+  width: 765px;
+  height: 608px;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  object-fit: cover;
+  object-position: top;
+}

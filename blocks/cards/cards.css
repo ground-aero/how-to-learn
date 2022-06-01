@@ -1,0 +1,11 @@
+/* cards wrapper */
+.cards {
+  list-style: none;
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  gap: 60px 100px;
+  width: 920px;
+  margin: 0 auto;
+  padding: 0;
+}

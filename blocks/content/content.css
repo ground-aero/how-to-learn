@@ -1,0 +1,6 @@
+/* XXXXXXX CONTENT OF PAGE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* ! Замечание ! position: relative - зд. не нужен - удален */
+.content {
+  display: flex;
+  flex-direction: column;
+}

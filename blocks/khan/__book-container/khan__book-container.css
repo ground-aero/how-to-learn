@@ -1,0 +1,5 @@
+/* блок-элемент-контейнер  */
+.khan__book-container {
+  display: flex;
+  gap: 48px;
+}
