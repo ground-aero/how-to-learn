@@ -31,4 +31,6 @@ _The following stacks and components were used in this project:_
 
 ---
 
+![illustrating img](https://github.com/ground-aero/how-to-learn/issues/1#issue-1511641147)
+
 _* updated as of Jun, 2022 *_
