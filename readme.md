@@ -2,6 +2,20 @@
 
 This project is about scientific methods and approaches how to learn
 
+##
+
+**Deployed here:**
+
+- [link to the project](https://ground-aero.github.io/how-to-learn/)
+
+##
+
+**Brief**
+
+- [PW#1, PW#2](https://code.s3.yandex.net/web-developer/project-1/sprint-2-brief.pdf)
+
+- [Check-list](https://code.s3.yandex.net/web-developer/checklists/checklist-2/index.html)
+
 ---
 
 _The following stacks and components were used in this project:_
